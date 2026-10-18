@@ -1,9 +1,9 @@
-# Публикует папку webapp/ на GitHub Pages при каждом push в main
+# Публикует папку webapp/ на GitHub Pages при каждом push в main или master
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
