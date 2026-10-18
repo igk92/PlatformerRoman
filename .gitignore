@@ -1,0 +1,13 @@
+venv/
+.idea/
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# исходные фото в корне проекта — не публикуем
+/*.png
+/*.jpg
+/*.jpeg
+/*.heic

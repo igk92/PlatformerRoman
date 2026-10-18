@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Платформер</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <canvas id="game"></canvas>
+
+      <div id="hud">
+        <span id="hud-level"></span>
+        <span id="hud-items"></span>
+      </div>
+
+      <!-- Диалог при взятии предмета -->
+      <div id="dialog" class="overlay hidden">
+        <div class="dialog-box">
+          <img id="dialog-avatar" alt="">
+          <div class="dialog-body">
+            <div id="dialog-name"></div>
+            <div id="dialog-text"></div>
+            <button id="dialog-ok" class="btn">Дальше</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Уровень пройден / победа -->
+      <div id="banner" class="overlay hidden">
+        <div class="banner-box">
+          <div id="banner-icon">⭐</div>
+          <div id="banner-title"></div>
+          <div id="banner-text"></div>
+          <button id="banner-btn" class="btn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <div class="dpad">
+        <button class="ctrl" data-key="left" aria-label="Влево">◀</button>
+        <button class="ctrl" data-key="right" aria-label="Вправо">▶</button>
+      </div>
+      <button class="ctrl ctrl-jump" data-key="jump" aria-label="Прыжок">▲</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
